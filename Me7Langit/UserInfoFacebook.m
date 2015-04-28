@@ -36,14 +36,6 @@
                               dictionary[@"email"], @"email",
                               dictionary[@"bio"], @"bio",
                               dictionary[@"about"], @"about", nil];
-//        _name = dictionary[@"name"];
-//        _gender = dictionary[@"gender"];
-//        _hometownName = dictionary[@"hometown"][@"name"];
-//        _idUserFB = dictionary[@"id"];
-//        _link = dictionary[@"link"];
-//        _email = dictionary[@"email"];
-//        _bio = dictionary[@"bio"];
-//        _about = dictionary[@"about"];
     }
     return self;
 }

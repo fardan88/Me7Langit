@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56847F3A1AEEACCC0032488E /* TimelineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56847F391AEEACCC0032488E /* TimelineView.m */; };
+		56847F3E1AEEAD220032488E /* TimelineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56847F3D1AEEAD220032488E /* TimelineCell.m */; };
 		568DE6241AEB795C008D67B0 /* UserFacebookView.m in Sources */ = {isa = PBXBuildFile; fileRef = 568DE6231AEB795C008D67B0 /* UserFacebookView.m */; };
 		568DE6271AEB8181008D67B0 /* UserInfoFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 568DE6261AEB8181008D67B0 /* UserInfoFacebook.m */; };
 		568DE6291AEB980E008D67B0 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568DE6281AEB980E008D67B0 /* AddressBook.framework */; };
@@ -21,6 +23,7 @@
 		568DE63B1AEB9910008D67B0 /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568DE63A1AEB9910008D67B0 /* GooglePlus.framework */; };
 		568DE63D1AEB991E008D67B0 /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568DE63C1AEB991E008D67B0 /* GoogleOpenSource.framework */; };
 		568DE63F1AEB9927008D67B0 /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 568DE63E1AEB9927008D67B0 /* GooglePlus.bundle */; };
+		56A7D3121AEF80000000189A /* TImelineResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A7D3111AEF80000000189A /* TImelineResults.m */; };
 		56B1F6251AEADD680054ED08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B1F6241AEADD680054ED08 /* main.m */; };
 		56B1F6281AEADD680054ED08 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B1F6271AEADD680054ED08 /* AppDelegate.m */; };
 		56B1F62B1AEADD680054ED08 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B1F62A1AEADD680054ED08 /* ViewController.m */; };
@@ -41,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		56847F381AEEACCC0032488E /* TimelineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineView.h; sourceTree = "<group>"; };
+		56847F391AEEACCC0032488E /* TimelineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineView.m; sourceTree = "<group>"; };
+		56847F3C1AEEAD220032488E /* TimelineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineCell.h; sourceTree = "<group>"; };
+		56847F3D1AEEAD220032488E /* TimelineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineCell.m; sourceTree = "<group>"; };
 		568DE6221AEB795C008D67B0 /* UserFacebookView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFacebookView.h; sourceTree = "<group>"; };
 		568DE6231AEB795C008D67B0 /* UserFacebookView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFacebookView.m; sourceTree = "<group>"; };
 		568DE6251AEB8181008D67B0 /* UserInfoFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoFacebook.h; sourceTree = "<group>"; };
@@ -57,6 +64,8 @@
 		568DE63A1AEB9910008D67B0 /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
 		568DE63C1AEB991E008D67B0 /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
 		568DE63E1AEB9927008D67B0 /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlus.bundle; sourceTree = "<group>"; };
+		56A7D3101AEF80000000189A /* TImelineResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TImelineResults.h; sourceTree = "<group>"; };
+		56A7D3111AEF80000000189A /* TImelineResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TImelineResults.m; sourceTree = "<group>"; };
 		56B1F61F1AEADD680054ED08 /* Me7Langit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Me7Langit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B1F6231AEADD680054ED08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56B1F6241AEADD680054ED08 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -102,6 +111,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56847F3B1AEEACE10032488E /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				56847F3C1AEEAD220032488E /* TimelineCell.h */,
+				56847F3D1AEEAD220032488E /* TimelineCell.m */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
 		56B1F6161AEADD680054ED08 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +141,7 @@
 		56B1F6211AEADD680054ED08 /* Me7Langit */ = {
 			isa = PBXGroup;
 			children = (
+				56847F3B1AEEACE10032488E /* TableViewCell */,
 				56B1F6481AEADD8E0054ED08 /* Framework */,
 				56B1F6261AEADD680054ED08 /* AppDelegate.h */,
 				56B1F6271AEADD680054ED08 /* AppDelegate.m */,
@@ -133,8 +152,12 @@
 				56B1F6221AEADD680054ED08 /* Supporting Files */,
 				568DE6221AEB795C008D67B0 /* UserFacebookView.h */,
 				568DE6231AEB795C008D67B0 /* UserFacebookView.m */,
+				56847F381AEEACCC0032488E /* TimelineView.h */,
+				56847F391AEEACCC0032488E /* TimelineView.m */,
 				568DE6251AEB8181008D67B0 /* UserInfoFacebook.h */,
 				568DE6261AEB8181008D67B0 /* UserInfoFacebook.m */,
+				56A7D3101AEF80000000189A /* TImelineResults.h */,
+				56A7D3111AEF80000000189A /* TImelineResults.m */,
 			);
 			path = Me7Langit;
 			sourceTree = "<group>";
@@ -287,9 +310,12 @@
 			files = (
 				56B1F62B1AEADD680054ED08 /* ViewController.m in Sources */,
 				568DE6241AEB795C008D67B0 /* UserFacebookView.m in Sources */,
+				56A7D3121AEF80000000189A /* TImelineResults.m in Sources */,
 				568DE6271AEB8181008D67B0 /* UserInfoFacebook.m in Sources */,
 				56B1F6281AEADD680054ED08 /* AppDelegate.m in Sources */,
+				56847F3E1AEEAD220032488E /* TimelineCell.m in Sources */,
 				56B1F6251AEADD680054ED08 /* main.m in Sources */,
+				56847F3A1AEEACCC0032488E /* TimelineView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +439,7 @@
 					"$(PROJECT_DIR)/Me7Langit",
 				);
 				INFOPLIST_FILE = Me7Langit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -430,7 +456,7 @@
 					"$(PROJECT_DIR)/Me7Langit",
 				);
 				INFOPLIST_FILE = Me7Langit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

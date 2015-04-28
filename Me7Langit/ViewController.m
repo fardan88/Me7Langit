@@ -27,6 +27,10 @@
     [super viewDidLoad];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    self.view.backgroundColor = [[UIColor colorWithRed:227 / 255.0 green:72 / 255.0 blue:47 / 255.0 alpha:1.0] colorWithAlphaComponent:0.86];
+//    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+//    UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:blur];
+//    [self.view addSubview:blurView];
     backgroundImg = [[UIImageView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     backgroundImg.image = [UIImage imageNamed:@"background-mainView"];
     [self.view addSubview:backgroundImg];
@@ -35,8 +39,10 @@
     logoImg.backgroundColor = [UIColor grayColor];
     logoImg.image = [UIImage imageNamed:@"icon"];
     logoImg.layer.cornerRadius = 6.0;
+    logoImg.layer.borderWidth = 2.0;
+    logoImg.layer.borderColor = [[UIColor whiteColor] CGColor];
     logoImg.layer.masksToBounds = YES;
-    [backgroundImg addSubview:logoImg];
+    [self.view addSubview:logoImg];
     
     [self viewLoginScreen];
 }

@@ -8,6 +8,7 @@
 
 #import "UserFacebookView.h"
 #import "UserInfoFacebook.h"
+#import "TimelineView.h"
 
 @interface UserFacebookView ()
 
@@ -39,6 +40,14 @@
     self.navigationItem.leftBarButtonItem = shareBtn;
     self.navigationItem.rightBarButtonItem = logoutBtn;
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:227 / 255.0 green:72 / 255.0 blue:47 / 255.0 alpha:1.0];
+    
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    titleLabel.text = @"About Me";
+    titleLabel.font = [UIFont fontWithName:@"Helvetica Bold" size:18];
+    titleLabel.textColor = [UIColor whiteColor];
+    
+    self.navigationItem.titleView = titleLabel;
+    [titleLabel sizeToFit];
     
     _scroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, self.navigationController.navigationBar.frame.size.height + 20, self.view.bounds.size.width, self.view.frame.size.height - (self.navigationController.navigationBar.frame.size.height + 20))];
     _scroll.delegate = self;
@@ -248,7 +257,19 @@
     
     moreView.frame = CGRectMake(8, morelabel.frame.origin.y + morelabel.frame.size.height + 8, self.scroll.frame.size.width - 16, profilPicture7Langit.frame.origin.y + profilPicture7Langit.frame.size.height + 8);
     
+    UIButton *goTimelineBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    goTimelineBtn.frame = CGRectMake(0, 0, moreView.frame.size.width, moreView.frame.size.height);
+    [goTimelineBtn addTarget:self action:@selector(timeline7langit) forControlEvents:UIControlEventTouchUpInside];
+    [moreView addSubview:goTimelineBtn];
+    
     _scroll.contentSize = CGSizeMake(self.view.frame.size.width, moreView.frame.origin.y + moreView.frame.size.height + 18);
+}
+
+-(void)timeline7langit
+{
+    TimelineView *timeline7Langit = [[TimelineView alloc] init];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:timeline7Langit];
+    [self presentViewController:nvc animated:YES completion:nil];
 }
 
 -(void)share
