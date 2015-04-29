@@ -23,6 +23,8 @@
 		568DE63B1AEB9910008D67B0 /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568DE63A1AEB9910008D67B0 /* GooglePlus.framework */; };
 		568DE63D1AEB991E008D67B0 /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568DE63C1AEB991E008D67B0 /* GoogleOpenSource.framework */; };
 		568DE63F1AEB9927008D67B0 /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 568DE63E1AEB9927008D67B0 /* GooglePlus.bundle */; };
+		569BCE7C1AF142FE00D6D575 /* DetailTimeLineResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 569BCE7B1AF142FE00D6D575 /* DetailTimeLineResult.m */; };
+		569BCE7F1AF1431E00D6D575 /* DetailTimelineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 569BCE7E1AF1431E00D6D575 /* DetailTimelineView.m */; };
 		56A7D3121AEF80000000189A /* TImelineResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A7D3111AEF80000000189A /* TImelineResults.m */; };
 		56B1F6251AEADD680054ED08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B1F6241AEADD680054ED08 /* main.m */; };
 		56B1F6281AEADD680054ED08 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B1F6271AEADD680054ED08 /* AppDelegate.m */; };
@@ -64,6 +66,10 @@
 		568DE63A1AEB9910008D67B0 /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
 		568DE63C1AEB991E008D67B0 /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
 		568DE63E1AEB9927008D67B0 /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlus.bundle; sourceTree = "<group>"; };
+		569BCE7A1AF142FE00D6D575 /* DetailTimeLineResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTimeLineResult.h; sourceTree = "<group>"; };
+		569BCE7B1AF142FE00D6D575 /* DetailTimeLineResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTimeLineResult.m; sourceTree = "<group>"; };
+		569BCE7D1AF1431E00D6D575 /* DetailTimelineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTimelineView.h; sourceTree = "<group>"; };
+		569BCE7E1AF1431E00D6D575 /* DetailTimelineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTimelineView.m; sourceTree = "<group>"; };
 		56A7D3101AEF80000000189A /* TImelineResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TImelineResults.h; sourceTree = "<group>"; };
 		56A7D3111AEF80000000189A /* TImelineResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TImelineResults.m; sourceTree = "<group>"; };
 		56B1F61F1AEADD680054ED08 /* Me7Langit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Me7Langit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,10 +160,14 @@
 				568DE6231AEB795C008D67B0 /* UserFacebookView.m */,
 				56847F381AEEACCC0032488E /* TimelineView.h */,
 				56847F391AEEACCC0032488E /* TimelineView.m */,
+				569BCE7D1AF1431E00D6D575 /* DetailTimelineView.h */,
+				569BCE7E1AF1431E00D6D575 /* DetailTimelineView.m */,
 				568DE6251AEB8181008D67B0 /* UserInfoFacebook.h */,
 				568DE6261AEB8181008D67B0 /* UserInfoFacebook.m */,
 				56A7D3101AEF80000000189A /* TImelineResults.h */,
 				56A7D3111AEF80000000189A /* TImelineResults.m */,
+				569BCE7A1AF142FE00D6D575 /* DetailTimeLineResult.h */,
+				569BCE7B1AF142FE00D6D575 /* DetailTimeLineResult.m */,
 			);
 			path = Me7Langit;
 			sourceTree = "<group>";
@@ -308,6 +318,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				569BCE7F1AF1431E00D6D575 /* DetailTimelineView.m in Sources */,
+				569BCE7C1AF142FE00D6D575 /* DetailTimeLineResult.m in Sources */,
 				56B1F62B1AEADD680054ED08 /* ViewController.m in Sources */,
 				568DE6241AEB795C008D67B0 /* UserFacebookView.m in Sources */,
 				56A7D3121AEF80000000189A /* TImelineResults.m in Sources */,

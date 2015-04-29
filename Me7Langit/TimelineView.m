@@ -9,6 +9,7 @@
 #import "TimelineView.h"
 #import "TimelineCell.h"
 #import "TImelineResults.h"
+#import "DetailTimelineView.h"
 
 @interface TimelineView ()
 
@@ -115,7 +116,7 @@ static NSString * const FBid7Langit = @"177321525623964";
 
 -(void)FBGraph7Langit
 {
-    [FBRequestConnection startWithGraphPath:[NSString stringWithFormat:@"%@/feed?limit=10", FBid7Langit]
+    [FBRequestConnection startWithGraphPath:[NSString stringWithFormat:@"%@/feed", FBid7Langit]
                           completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
                               dict = [[TImelineResults alloc] initWithDictionary:result];
                               [self.timelineTableView reloadData];
@@ -187,6 +188,13 @@ static NSString * const FBid7Langit = @"177321525623964";
     }
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    DetailTimelineView *detailView = [[DetailTimelineView alloc] init];
+    detailView.idDetailTimeline = [NSString stringWithFormat:@"%@", dict.idTimeline[indexPath.row]];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:detailView];
+    [self presentViewController:nvc animated:YES completion:nil];
 }
 
 @end

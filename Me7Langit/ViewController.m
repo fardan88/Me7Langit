@@ -65,7 +65,7 @@
     
     facebookLoginBtn.delegate = self;
     facebookLoginBtn.frame = CGRectMake(self.view.frame.size.width / 2 - (218 / 2), firstLabel.frame.origin.y + firstLabel.frame.size.height + 8, 218, 46);
-    facebookLoginBtn.readPermissions = @[@"user_about_me", @"email", @"user_birthday", @"user_hometown", @"user_photos"];
+    facebookLoginBtn.readPermissions = @[@"user_about_me", @"email", @"user_birthday", @"user_hometown", @"user_photos", @"publish_actions"];
     [self.view addSubview:facebookLoginBtn];
     
     UIView *line = [[UIView alloc] initWithFrame:CGRectMake(facebookLoginBtn.frame.origin.x, facebookLoginBtn.frame.origin.y + facebookLoginBtn.frame.size.height + 14, facebookLoginBtn.frame.size.width / 2 - 15, 1)];
