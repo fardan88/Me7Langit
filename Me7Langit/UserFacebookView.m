@@ -33,7 +33,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
 //    UIBarButtonItem *shareBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"share-icon"] style:UIBarButtonItemStylePlain target:self action:@selector(share)];
-    UIBarButtonItem *shareBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(share)];
+    UIBarButtonItem *shareBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(share)];
     UIBarButtonItem *logoutBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"logout-icon"] style:UIBarButtonItemStylePlain target:self action:@selector(logout)];
     shareBtn.tintColor = [UIColor whiteColor];
     logoutBtn.tintColor = [UIColor whiteColor];

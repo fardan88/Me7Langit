@@ -23,6 +23,9 @@
 		568DE63B1AEB9910008D67B0 /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568DE63A1AEB9910008D67B0 /* GooglePlus.framework */; };
 		568DE63D1AEB991E008D67B0 /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568DE63C1AEB991E008D67B0 /* GoogleOpenSource.framework */; };
 		568DE63F1AEB9927008D67B0 /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 568DE63E1AEB9927008D67B0 /* GooglePlus.bundle */; };
+		569112E41AF4A80C0043B561 /* CommentFacebookView.m in Sources */ = {isa = PBXBuildFile; fileRef = 569112E31AF4A80C0043B561 /* CommentFacebookView.m */; };
+		569112E71AF4AE0E0043B561 /* UserGooglePlusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 569112E61AF4AE0E0043B561 /* UserGooglePlusView.m */; };
+		569112EA1AF4B3670043B561 /* UserInfoGooglePlus.m in Sources */ = {isa = PBXBuildFile; fileRef = 569112E91AF4B3670043B561 /* UserInfoGooglePlus.m */; };
 		569BCE7C1AF142FE00D6D575 /* DetailTimeLineResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 569BCE7B1AF142FE00D6D575 /* DetailTimeLineResult.m */; };
 		569BCE7F1AF1431E00D6D575 /* DetailTimelineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 569BCE7E1AF1431E00D6D575 /* DetailTimelineView.m */; };
 		56A7D3121AEF80000000189A /* TImelineResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A7D3111AEF80000000189A /* TImelineResults.m */; };
@@ -66,6 +69,12 @@
 		568DE63A1AEB9910008D67B0 /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
 		568DE63C1AEB991E008D67B0 /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
 		568DE63E1AEB9927008D67B0 /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlus.bundle; sourceTree = "<group>"; };
+		569112E21AF4A80C0043B561 /* CommentFacebookView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentFacebookView.h; sourceTree = "<group>"; };
+		569112E31AF4A80C0043B561 /* CommentFacebookView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentFacebookView.m; sourceTree = "<group>"; };
+		569112E51AF4AE0E0043B561 /* UserGooglePlusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserGooglePlusView.h; sourceTree = "<group>"; };
+		569112E61AF4AE0E0043B561 /* UserGooglePlusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserGooglePlusView.m; sourceTree = "<group>"; };
+		569112E81AF4B3670043B561 /* UserInfoGooglePlus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoGooglePlus.h; sourceTree = "<group>"; };
+		569112E91AF4B3670043B561 /* UserInfoGooglePlus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoGooglePlus.m; sourceTree = "<group>"; };
 		569BCE7A1AF142FE00D6D575 /* DetailTimeLineResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTimeLineResult.h; sourceTree = "<group>"; };
 		569BCE7B1AF142FE00D6D575 /* DetailTimeLineResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTimeLineResult.m; sourceTree = "<group>"; };
 		569BCE7D1AF1431E00D6D575 /* DetailTimelineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTimelineView.h; sourceTree = "<group>"; };
@@ -162,12 +171,18 @@
 				56847F391AEEACCC0032488E /* TimelineView.m */,
 				569BCE7D1AF1431E00D6D575 /* DetailTimelineView.h */,
 				569BCE7E1AF1431E00D6D575 /* DetailTimelineView.m */,
+				569112E21AF4A80C0043B561 /* CommentFacebookView.h */,
+				569112E31AF4A80C0043B561 /* CommentFacebookView.m */,
 				568DE6251AEB8181008D67B0 /* UserInfoFacebook.h */,
 				568DE6261AEB8181008D67B0 /* UserInfoFacebook.m */,
 				56A7D3101AEF80000000189A /* TImelineResults.h */,
 				56A7D3111AEF80000000189A /* TImelineResults.m */,
 				569BCE7A1AF142FE00D6D575 /* DetailTimeLineResult.h */,
 				569BCE7B1AF142FE00D6D575 /* DetailTimeLineResult.m */,
+				569112E51AF4AE0E0043B561 /* UserGooglePlusView.h */,
+				569112E61AF4AE0E0043B561 /* UserGooglePlusView.m */,
+				569112E81AF4B3670043B561 /* UserInfoGooglePlus.h */,
+				569112E91AF4B3670043B561 /* UserInfoGooglePlus.m */,
 			);
 			path = Me7Langit;
 			sourceTree = "<group>";
@@ -320,9 +335,12 @@
 			files = (
 				569BCE7F1AF1431E00D6D575 /* DetailTimelineView.m in Sources */,
 				569BCE7C1AF142FE00D6D575 /* DetailTimeLineResult.m in Sources */,
+				569112EA1AF4B3670043B561 /* UserInfoGooglePlus.m in Sources */,
+				569112E41AF4A80C0043B561 /* CommentFacebookView.m in Sources */,
 				56B1F62B1AEADD680054ED08 /* ViewController.m in Sources */,
 				568DE6241AEB795C008D67B0 /* UserFacebookView.m in Sources */,
 				56A7D3121AEF80000000189A /* TImelineResults.m in Sources */,
+				569112E71AF4AE0E0043B561 /* UserGooglePlusView.m in Sources */,
 				568DE6271AEB8181008D67B0 /* UserInfoFacebook.m in Sources */,
 				56B1F6281AEADD680054ED08 /* AppDelegate.m in Sources */,
 				56847F3E1AEEAD220032488E /* TimelineCell.m in Sources */,

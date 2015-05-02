@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "UserFacebookView.h"
 #import "UserInfoFacebook.h"
+#import "UserGooglePlusView.h"
+#import "UserInfoGooglePlus.h"
 #import "GoogleOpenSource.framework/Headers/GTLPlusConstants.h"
 #import "GooglePlus.framework/Headers/GPPSignInButton.h"
 
@@ -16,6 +18,7 @@
 
 {
     UIImageView *backgroundImg;
+    UserInfoGooglePlus *getResult;
 }
 
 @end
@@ -84,22 +87,17 @@
     [self.view addSubview:secondLine];
     
     GPPSignIn *signIn = [GPPSignIn sharedInstance];
-    // Anda sebelumnya menetapkan kClientID di langkah "Mempersiapkan klien Google+"
     signIn.clientID = kClientId;
     signIn.scopes = [NSArray arrayWithObjects:
-                     kGTLAuthScopePlusLogin, // yang ditetapkan di GTLPlusConstants.h
+                     kGTLAuthScopePlusLogin,
                      nil];
+    signIn.shouldFetchGooglePlusUser = YES;
+    signIn.shouldFetchGoogleUserEmail = YES;
     signIn.delegate = self;
     
     signInButton.frame = CGRectMake(self.view.frame.size.width / 2 - (148 / 2), secondLabel.frame.origin.y + secondLabel.frame.size.height + 4, 148, 48);
     [self.view addSubview:signInButton];
     [signIn trySilentAuthentication];
-    
-//    UIButton *signOutBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-//    signOutBtn.frame = CGRectMake(80, 120, 100, 100);
-//    [signOutBtn setTitle:@"Sign Out" forState:UIControlStateNormal];
-//    [signOutBtn addTarget:self action:@selector(signOut) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:signOutBtn];
 }
 
 #pragma mark - FBLoginViewDelegate
@@ -123,26 +121,13 @@
 {
     NSLog(@"Received error %@ and auth object %@",error, auth);
     if (error) {
-        // Lakukan beberapa penanganan kesalahan di sini.
+        
     } else {
-        [self refreshInterfaceBasedOnSignIn];
+        getResult = [[UserInfoGooglePlus alloc] initWithSDKGooglePlus];
+        UserGooglePlusView *userView = [[UserGooglePlusView alloc] init];
+        UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:userView];
+        [self presentViewController:nvc animated:YES completion:nil];
     }
-}
-
--(void)refreshInterfaceBasedOnSignIn
-{
-    if ([[GPPSignIn sharedInstance] authentication]) {
-        // Pengguna masuk.
-        self.signInButton.hidden = YES;
-        // Lakukan tindakan lain di sini, seperti menampilkan tombol masuk
-    } else {
-        self.signInButton.hidden = NO;
-        // Lakukan tindakan lain di sini
-    }
-}
-
-- (void)signOut {
-    [[GPPSignIn sharedInstance] signOut];
 }
 
 @end

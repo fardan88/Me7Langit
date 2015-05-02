@@ -8,6 +8,7 @@
 
 #import "DetailTimelineView.h"
 #import "DetailTimeLineResult.h"
+#import "CommentFacebookView.h"
 
 @interface DetailTimelineView ()
 
@@ -86,6 +87,13 @@
                            }];
 }
 
+-(void)commentDetail {
+    CommentFacebookView *commentView = [[CommentFacebookView alloc] init];
+    commentView.idDetailTimeline = [NSString stringWithFormat:@"%@", detailResult.idDetailTimeline];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:commentView];
+    [self presentViewController:nvc animated:YES completion:nil];
+}
+
 -(void)viewCard {
     UIView *cardView = [[UIView alloc] initWithFrame:CGRectMake(8, 8, self.view.frame.size.width - 16, 0)];
     cardView.backgroundColor = [UIColor whiteColor];
@@ -157,6 +165,7 @@
     UIButton *commentBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     commentBtn.frame = CGRectMake(cardView.frame.size.width / 2, line.frame.origin.y + line.frame.size.height, cardView.frame.size.width / 2, 40);
     [commentBtn setTitle:@"Comment" forState:UIControlStateNormal];
+    [commentBtn addTarget:self action:@selector(commentDetail) forControlEvents:UIControlEventTouchUpInside];
     commentBtn.titleLabel.font = [UIFont systemFontOfSize:18];
     commentBtn.tintColor = [UIColor colorWithRed:227 / 255.0 green:72 / 255.0 blue:47 / 255.0 alpha:1.0];
     [cardView addSubview:commentBtn];

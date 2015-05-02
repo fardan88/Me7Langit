@@ -72,7 +72,12 @@ static NSString * const FBid7Langit = @"177321525623964";
     generalInfoLabel.backgroundColor = [[UIColor colorWithRed:227 / 255.0 green:72 / 255.0 blue:47 / 255.0 alpha:1.0] colorWithAlphaComponent:0.56];
     generalInfoLabel.font = [UIFont fontWithName:@"Helvetica" size:12];
     
-    _timelineTableView = [[UITableView alloc] initWithFrame:CGRectMake(8, profilPicture7Langit.frame.origin.y + profilPicture7Langit.frame.size.height + 4, self.view.frame.size.width - 16, self.view.frame.size.height - (profilPicture7Langit.frame.origin.y + profilPicture7Langit.frame.size.height + 4 + 8)) style:UITableViewStylePlain];
+    FBLikeControl *likeControl = [[FBLikeControl alloc] initWithFrame:CGRectMake(profilPicture7Langit.frame.origin.x + profilPicture7Langit.frame.size.width + 4, coverPhoto.frame.origin.y + coverPhoto.frame.size.height + 4, 0, 0)];
+    likeControl.objectID = [NSString stringWithFormat:@"https://www.facebook.com/%@", FBid7Langit];
+    [self.view addSubview:likeControl];
+    [likeControl sizeToFit];
+    
+    _timelineTableView = [[UITableView alloc] initWithFrame:CGRectMake(8, likeControl.frame.origin.y + likeControl.frame.size.height + 4, self.view.frame.size.width - 16, self.view.frame.size.height - (profilPicture7Langit.frame.origin.y + profilPicture7Langit.frame.size.height + 4 + 8)) style:UITableViewStylePlain];
     _timelineTableView.delegate = self;
     _timelineTableView.dataSource = self;
     _timelineTableView.rowHeight = 112;
